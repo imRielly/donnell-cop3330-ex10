@@ -68,24 +68,23 @@ public class App {
         System.out.println(result);
     }
 
-    private static double calculateItemTotal(double price, double quan) {
-        return price * quan;
+    private static double calculateItemTotal(double price, double quantity) {
+        return price * quantity;
     }
 
     private static double calculateSubTotal(double t1, double t2, double t3) {
         return t1 + t2 + t3;
     }
 
-    private static double calculateTax(double subtotal, double taxrate) {
-        return subtotal * taxrate;
+    private static double calculateTax(double subtotal, double taxRate) {
+        return subtotal * taxRate;
     }
 
     private static double calculateTotal(double subtotal, double tax) {
         return subtotal + tax;
     }
 
-    private static String generateReceipt(double subt, double tax, double total) {
-        String output = String.format("Subtotal: $%s\nTax: $%s\nTotal: $%s", subt, tax, total);
-        return output;
+    private static String generateReceipt(double subtotal, double tax, double total) {
+        return String.format("Subtotal: $%s\nTax: $%s\nTotal: $%s", subtotal, tax, total);
     }
 }
